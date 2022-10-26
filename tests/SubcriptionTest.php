@@ -5,6 +5,7 @@ namespace Tests;
 use App\Gateway\BraintreeGateway;
 use App\Gateway\GatewayInterface;
 use App\Gateway\StripeGateway;
+use App\Gateway\VnPayGateway;
 use App\Mailer;
 use App\Subcribe;
 use App\User;
@@ -42,6 +43,10 @@ class SubcriptionTest extends TestCase
 
     }
 
+    public function test_vn_pay_gateway_must_implement_gateway_interface()
+    {
+        $this->assertInstanceOf(GatewayInterface::class, new VnPayGateway());
+    }
 
     
 }
