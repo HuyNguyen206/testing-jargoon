@@ -2,7 +2,11 @@
 
 namespace App\Gateway;
 
-class VnPayGateway
+class VnPayGateway implements GatewayInterface
 {
 
+    public function create()
+    {
+        // TODO: Implement create() method.
+    }
 }
